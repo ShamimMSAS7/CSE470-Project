@@ -3,6 +3,7 @@ from django.urls import reverse
 from App_Login.models import Profile, User, UserManager
 from App_Login.forms import ProfileForm,SignUpForm
 
+
 # Create your tests here.
 
 #There isn't any class in my views.py file and so I have added all the test functions for views.py file in the class below

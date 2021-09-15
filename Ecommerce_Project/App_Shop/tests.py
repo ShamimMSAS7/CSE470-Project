@@ -2,7 +2,6 @@ from django.test import TestCase, Client
 from django.urls import reverse
 from App_Shop.models import Category, Product
 
-
 # Create your tests here.
 
 #There isn't any method in my view.py file though I have 2 classes for initializing fields. As there is no method, I am not writing any test for views.py file

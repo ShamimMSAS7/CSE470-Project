@@ -10,7 +10,7 @@ class BillingAddress(models.Model):
     country = models.CharField(max_length=20, blank=True)
 
     def __str__(self):
-        return f'{self.user.profile.username} billing address'
+        return f"{self.user.profile.username}'s billing address"
 
     def is_fully_filled(self):
         field_names = [f.name for f in self._meta.get_fields()]

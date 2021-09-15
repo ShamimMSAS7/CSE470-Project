@@ -1,5 +1,4 @@
 from django.db import models
-
 #to create a custom user model and admin panel
 from django.contrib.auth.models import BaseUserManager, AbstractBaseUser, PermissionsMixin
 from django.utils.translation import ugettext_lazy

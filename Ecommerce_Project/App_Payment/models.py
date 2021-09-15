@@ -22,5 +22,6 @@ class BillingAddress(models.Model):
         return True
 
 
+
     class Meta:
         verbose_name_plural = "Billing Addresses"

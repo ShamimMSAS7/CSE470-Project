@@ -4,6 +4,7 @@ from App_Shop.models import Product, Category
 from App_Order.models import Cart, Order
 from App_Login.models import User
 
+
 # Create your tests here.
 
 #There isn't any class in my views.py file and so I have added all the test functions for views.py file in the class below

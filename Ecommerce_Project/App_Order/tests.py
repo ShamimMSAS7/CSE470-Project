@@ -7,32 +7,6 @@ from App_Login.models import User
 
 # Create your tests here.
 
-#There isn't any class in my views.py file and so I have added all the test functions for views.py file in the class below
-class ViewsTest(TestCase):
-    def test_add_to_cart(self):
-        response = self.client.get(reverse('App_Order:add', args=(1,)))
-        self.assertEqual(response.status_code,302)
-
-    def test_cart_view(self):
-        response = self.client.get(reverse('App_Order:cart'))
-        self.assertEqual(response.status_code,302)
-
-    def test_remove_from_cart(self):
-        response = self.client.get(reverse('App_Order:remove', args=(1,)))
-        self.assertEqual(response.status_code,302)
-
-    def test_increase_cart(self):
-        response = self.client.get(reverse('App_Order:increase', args=(1,)))
-        self.assertEqual(response.status_code,302)
-
-    def test_decrease_cart(self):
-        response = self.client.get(reverse('App_Order:decrease', args=(1,)))
-        self.assertEqual(response.status_code,302)
-
-
-
-
-
 #Testing for models classes
 class CartTest(TestCase):
     def setUp(self) -> None:
@@ -76,3 +50,28 @@ class OrderTest(TestCase):
 
     def test_get_totals(self):
         self.assertEqual(self.order.get_totals(),4000.0)
+
+
+
+
+#There isn't any class in my views.py file and so I have added all the test functions for views.py file in the class below
+class ViewsTest(TestCase):
+    def test_add_to_cart(self):
+        response = self.client.get(reverse('App_Order:add', args=(1,)))
+        self.assertEqual(response.status_code,302)
+
+    def test_cart_view(self):
+        response = self.client.get(reverse('App_Order:cart'))
+        self.assertEqual(response.status_code,302)
+
+    def test_remove_from_cart(self):
+        response = self.client.get(reverse('App_Order:remove', args=(1,)))
+        self.assertEqual(response.status_code,302)
+
+    def test_increase_cart(self):
+        response = self.client.get(reverse('App_Order:increase', args=(1,)))
+        self.assertEqual(response.status_code,302)
+
+    def test_decrease_cart(self):
+        response = self.client.get(reverse('App_Order:decrease', args=(1,)))
+        self.assertEqual(response.status_code,302)

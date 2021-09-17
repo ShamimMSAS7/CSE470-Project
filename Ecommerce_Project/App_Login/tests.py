@@ -6,26 +6,6 @@ from App_Login.forms import ProfileForm,SignUpForm
 
 # Create your tests here.
 
-#There isn't any class in my views.py file and so I have added all the test functions for views.py file in the class below
-class ViewsTest(TestCase):
-    def test_sign_up(self):
-        response = self.client.get(reverse('App_Login:signup'))
-        self.assertEqual(response.status_code, 200)
-
-    def test_login_user(self):
-        response = self.client.get(reverse('App_Login:login'))
-        self.assertEqual(response.status_code, 200)
-
-    def test_logout_user(self):
-        response = self.client.get(reverse('App_Login:logout'))
-        self.assertEqual(response.status_code, 302)
-
-    def test_user_profile(self):
-        response = self.client.get(reverse('App_Login:profile'))
-        self.assertEqual(response.status_code, 302)
-
-
-
 
 
 #Testing for models classes
@@ -78,3 +58,23 @@ class SignUpFormTests(TestCase):
     def test_meta_class(self):
         form = SignUpForm(data={})
         self.assertFalse(form.is_valid())
+
+
+
+#There isn't any class in my views.py file and so I have added all the test functions for views.py file in the class below
+class ViewsTest(TestCase):
+    def test_sign_up(self):
+        response = self.client.get(reverse('App_Login:signup'))
+        self.assertEqual(response.status_code, 200)
+
+    def test_login_user(self):
+        response = self.client.get(reverse('App_Login:login'))
+        self.assertEqual(response.status_code, 200)
+
+    def test_logout_user(self):
+        response = self.client.get(reverse('App_Login:logout'))
+        self.assertEqual(response.status_code, 302)
+
+    def test_user_profile(self):
+        response = self.client.get(reverse('App_Login:profile'))
+        self.assertEqual(response.status_code, 302)
